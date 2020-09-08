@@ -3,7 +3,7 @@ About r-tsdist
 
 Home: https://CRAN.R-project.org/package=TSdist
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD-3-Clause
 
