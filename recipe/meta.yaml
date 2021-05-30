@@ -70,7 +70,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=TSdist
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: A set of commonly used distance measures and some additional functions which, although initially not designed for this purpose, can be used to measure the dissimilarity between time series. These measures can be used to perform clustering, classification or other data mining tasks which require the definition
     of a distance measure between time series.
   license_family: GPL3
