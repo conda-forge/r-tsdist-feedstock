@@ -1,4 +1,4 @@
-{% set version = "3.7" %}
+{% set version = "3.7.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/TSdist_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/TSdist/TSdist_{{ version }}.tar.gz
-  sha256: e327bc89aad0b49266fb2dae062b840dc59086ec58e746a1455110e1f30187f7
+  sha256: 3fed4bf221f3a1262c8daa08cf2415a1c526110d21bc0c783a8274eea2aa7a61
 
 build:
   merge_build_host: true  # [win]
@@ -65,7 +65,7 @@ test:
   requires:
     - xorg-libxfixes  # [linux]
   commands:
-    - LD_LIBRARY_PATH="${BUILD_PREFIX}/x86_64-conda-linux-gnu/sysroot/usr/lib64:${BUILD_PREFIX}/lib" $R -e "library('TSdist')"  # [not win]
+    - LD_LIBRARY_PATH="${BUILD_PREFIX}/x86_64-conda-linux-gnu/sysroot/usr/lib64: ${BUILD_PREFIX}/lib" $R -e "library('TSdist')"  # [not win]
     - "\"%R%\" -e \"library('TSdist')\""  # [win]
 
 about:
